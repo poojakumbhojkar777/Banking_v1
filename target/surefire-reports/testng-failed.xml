@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.banking.Utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.banking.TestCases.TC_LoginTest_001">
+        <methods>
+          <include name="LoginTest"/>
+          <include name="tierDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.banking.TestCases.TC_LoginTest_001 -->
+      <class name="com.banking.TestCases.TC_AddCustomerTest_003">
+        <methods>
+          <include name="tierDown"/>
+          <include name="addCustomer"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.banking.TestCases.TC_AddCustomerTest_003 -->
+      <class name="com.banking.TestCases.TC_LoginDDT_002">
+        <methods>
+          <include name="tierDown"/>
+          <include name="LoginTestDDT" invocation-numbers="0 1 2 3"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.banking.TestCases.TC_LoginDDT_002 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
